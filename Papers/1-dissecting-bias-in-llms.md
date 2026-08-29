@@ -261,7 +261,3 @@ The conclusions regarding **bias localization and circuit instability** are well
 The source material provides one reference:
 
 1. B. Chandna, Z. Bashir, and P. Sen, *"Dissecting Bias in LLMs: A Mechanistic Interpretability Perspective,"*.
-
-## Bottom Line
-
-The paper argues that demographic and gender biases in LLMs can be traced to specific computational edges and layers, making causal, inference-time intervention possible. However, these circuits are unstable and can overlap with general language capabilities, creating a fundamental trade-off between **bias reduction and model utility**. The results suggest that mechanistic localization is a promising tool for understanding LLM bias, but reliable debiasing requires accounting for prompt sensitivity, circuit instability, and functional entanglement.
