@@ -156,15 +156,15 @@ Experiments were conducted using:
 
 | Model | Layers Associated with Bias |
 |---|---|
-| **GPT-2 Small** | Layers **2–6** |
+| **GPT-2 Small** | Layers **2-6** |
 | **GPT-2 Large** | Layers **9, 10, 20, 34, 35** |
-| **Llama-2** | Layers **0–11 and 30–31** |
+| **Llama-2** | Layers **0-11 and 30-31** |
 
-### Bias–Task Trade-offs
+### Bias-Task Trade-offs
 
 | Model | Bias Result | Downstream Impact |
 |---|---|---|
-| **GPT-2 Small** | Demographic bias reduced by approximately **30–36%** | CoLA performance dropped by up to **22.6%**; NER dropped by up to **20.4%** |
+| **GPT-2 Small** | Demographic bias reduced by approximately **30-36%** | CoLA performance dropped by up to **22.6%**; NER dropped by up to **20.4%** |
 | **Llama-2** | Demographic bias reduced by approximately **35%** for DSS2 | Negligible downstream performance drop of **0.01%** |
 | **GPT-2 Large** | DSS1 bias **increased by 8.89%** after corruption | Downstream task performance also decreased |
 
