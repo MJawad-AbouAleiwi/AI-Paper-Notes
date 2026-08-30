@@ -126,7 +126,6 @@ The merged adapter is updated using, so that each task has an equal contribution
 | Parameter | Value |
 |---|---:|
 | Rank | 32 |
-| \(\alpha\) | 128 |
 | Llama-3.2-1B adapter size | 23M parameters / 27 MB |
 | Qwen-2.5-1.5B adapter size | 37M parameters / 34 MB |
 
@@ -161,7 +160,6 @@ The evaluation contains **40 sequential tasks** across **8 languages** and **5 p
 |---|---|
 | Storage budget | K = 1-8 |
 | Optimizer | AdamW |
-| Learning rate | \(5 \times 10^{-5}\) |
 | Dropout | 0.05 |
 | Batch size | 3 |
 | Sequential adapters | 40 |
@@ -195,11 +193,6 @@ Performance is measured using a **Normalized Aggregate Score**.
 
 The metric averages the ratio between merged-adapter performance and single-task-adapter performance across encountered tasks.
 
-Task-specific metrics include:
-
-- \(F_1\)
-- \(F_{0.5}\)
-- ROUGE
 
 ## Key Results
 
@@ -237,14 +230,7 @@ when managing **2-8 stored multi-tasking adapters**.
 
 ### Similarity Metric
 
-Cosine similarity performed best for clustering:
-
-| Similarity Metric | Score at K = 5 |
-|---|---:|
-| **Cosine** | **0.78** |
-| \(L^1\) | 0.67-0.69 |
-| \(L^2\) | 0.67-0.69 |
-| \(L^\infty\) | 0.67-0.69 |
+Cosine similarity performed best for clustering.
 
 ### Storage Efficiency
 
@@ -275,17 +261,11 @@ This corresponds to an **86.5% reduction in storage requirements**.
 
 ### Low-Rank Adaptation (LoRA)
 
-LoRA freezes the base LLM weights and introduces trainable low-rank matrices \(B\) and \(A\), reducing the number of parameters required for task-specific fine-tuning.
+LoRA freezes the base LLM weights and introduces trainable low-rank matrices, reducing the number of parameters required for task-specific fine-tuning.
 
 ### Cosine Similarity
 
-K-Merge compares LoRA adapters by flattening their update matrices:
-
-$$
-\Delta W = BA
-$$
-
-It then uses cosine similarity to measure how similar the resulting adapter updates are.
+K-Merge compares LoRA adapters by flattening their update matrices. It then uses cosine similarity to measure how similar the resulting adapter updates are.
 
 ### History-Aware Running Average
 
@@ -293,7 +273,7 @@ The running average accounts for how many adapters have already been merged into
 
 ### Similarity Threshold
 
-K-Merge++ uses a threshold \(s\) to determine whether an incoming adapter is sufficiently similar to an existing cluster to be merged.
+K-Merge++ uses a threshold to determine whether an incoming adapter is sufficiently similar to an existing cluster to be merged.
 
 ## Limitations
 
@@ -306,7 +286,7 @@ K-Merge++ uses a threshold \(s\) to determine whether an incoming adapter is suf
 ### Inferred Limitations
 
 - **Perfect Task Routing:** The methodology assumes that the system can perfectly identify which merged adapter should be used at inference time. An imperfect task classifier could reduce performance.
-- **Threshold Calibration:** K-Merge++ requires an auxiliary LoRA dataset to calibrate \(s\). Its effectiveness therefore depends on how representative this dataset is of future tasks.
+- **Threshold Calibration:** K-Merge++ requires an auxiliary LoRA dataset to calibrate. Its effectiveness therefore depends on how representative this dataset is of future tasks.
 
 ## Critical Evaluation
 
