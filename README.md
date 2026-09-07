@@ -17,3 +17,5 @@ The summaries are based on the original research papers, and intended to make pa
 4. [How Reliable is Language Model Micro-Benchmarking?](Papers/4-micro-benchmarking-reliability.md)
 
 5. [Is Cosine-Similarity of Embeddings Really About Similarity?](Papers/5-cosine-similarity-embeddings.md)
+
+6. [Discovering Significant Topics from Legal Decisions with Selective Inference](Papers/6-discovering-significant-topics-legal-decisions.md)
