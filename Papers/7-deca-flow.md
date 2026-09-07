@@ -275,8 +275,6 @@ The reported experimental results strongly support the paper's claims. DeCaFlow 
 - DeCaFlow can also support downstream applications such as counterfactual fairness.
 - The approach depends on continuous variables, a known acyclic causal graph, suitable structural equations, and informative proxies.
 
-## Further Reading / Related Work
-
-The provided analysis cites the following paper:
+## Further Reading
 
 [1] A. Almodóvar, A. Javaloy, J. Parras, S. Zazo, and I. Valera, "DeCaFlow: A deconfounding causal generative model," in *Proc. 39th Conference on Neural Information Processing Systems (NeurIPS 2025)*, 2025.
