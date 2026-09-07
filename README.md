@@ -19,3 +19,5 @@ The summaries are based on the original research papers, and intended to make pa
 5. [Is Cosine-Similarity of Embeddings Really About Similarity?](Papers/5-cosine-similarity-embeddings.md)
 
 6. [Discovering Significant Topics from Legal Decisions with Selective Inference](Papers/6-discovering-significant-topics-legal-decisions.md)
+
+7. [DeCaFlow: A Deconfounding Causal Generative Model](Papers/7-deca-flow.md)
