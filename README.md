@@ -21,3 +21,5 @@ The summaries are based on the original research papers, and intended to make pa
 6. [Discovering Significant Topics from Legal Decisions with Selective Inference](Papers/6-discovering-significant-topics-legal-decisions.md)
 
 7. [DeCaFlow: A Deconfounding Causal Generative Model](Papers/7-deca-flow.md)
+
+8. [Fed-CBS: A Heterogeneity-Aware Client Sampling Mechanism for Federated Learning via Class-Imbalance Reduction](Papers/8-fed-cbs.md)
